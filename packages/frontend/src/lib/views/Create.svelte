@@ -66,7 +66,7 @@
 
 			const derived = customPassword && (await AES.derive(customPassword))
 			const key = derived ? derived[0] : await AES.generateKey()
-			const disableModSw = $status?.disable_mode_sw
+			const disableModSwitch = $status?.disable_mode_switch
 
 			const data: Note = {
 				contents: '',
@@ -80,7 +80,7 @@
 				if (note.contents === '') throw new EmptyContentError()
 				data.contents = await Adapters.Text.encrypt(note.contents, key)
 			}
-			if (disableModSw && advanced) {
+			if (disableModSwitch && advanced) {
 				data.views = parseInt(note.views as any)
 				data.expiration = parseInt(note.expiration as any)
 			} else {

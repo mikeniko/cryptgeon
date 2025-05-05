@@ -26,8 +26,12 @@ pub static ref MAX_EXPIRATION: u32 = std::env::var("MAX_EXPIRATION")
   .unwrap_or("360".to_string()) // 6 hours in minutes
   .parse()
   .unwrap();
-pub static ref DEFAULT_EXPIRE: u32 = std::env::var("DEFAULT_EXPIRE")
+  pub static ref DEFAULT_EXPIRE: u32 = std::env::var("DEFAULT_EXPIRE")
   .unwrap_or("60".to_string())
+  .parse()
+  .unwrap();
+pub static ref DEFAULT_VIEWS: u32 = std::env::var("DEFAULT_VIEWS")
+  .unwrap_or("0".to_string())
   .parse()
   .unwrap();
 pub static ref ALLOW_ADVANCED: bool = std::env::var("ALLOW_ADVANCED")
@@ -50,7 +54,7 @@ pub static ref IMPRINT_HTML: String = std::env::var("IMPRINT_HTML")
   .unwrap_or("".to_string())
   .parse()
   .unwrap();
-pub static ref DISABLE_MODE_SW: bool = std::env::var("DISABLE_MODE_SW")
+pub static ref DISABLE_MODE_SWITCH: bool = std::env::var("DISABLE_MODE_SWITCH")
   .unwrap_or("false".to_string())
   .parse()
   .unwrap();

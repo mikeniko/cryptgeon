@@ -116,7 +116,7 @@ export type Status = {
   allow_files: boolean
   imprint_url: string
   imprint_html: string
-  disable_mode_sw: boolean
+  disable_mode_switch: boolean
   theme_image: string
   theme_text: string
   theme_favicon: string
