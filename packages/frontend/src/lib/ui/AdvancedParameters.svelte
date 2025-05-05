@@ -23,6 +23,8 @@
 	$effect(() => {
 		if (!hasCustomPassword) customPassword = null
 	})
+
+	let disableModSw = $status && $status?.disable_mode_sw
 </script>
 
 <div class="flex col">
@@ -32,27 +34,30 @@
 			type="number"
 			label={$t('common.views', { values: { n: 0 } })}
 			bind:value={note.views}
-			disabled={timeExpiration}
+			disabled={timeExpiration && !disableModSw}
 			max={$status?.max_views}
 			min={1}
 			validate={(v) =>
 				($status && v <= $status?.max_views && v > 0) ||
 				$t('home.errors.max', { values: { n: $status?.max_views ?? 0 } })}
 		/>
+		{#if !disableModSw}
 		<Switch
 			data-testid="switch-advanced-toggle"
 			label={$t('common.mode')}
 			bind:value={timeExpiration}
 			color={false}
 		/>
+		{/if}
 		<TextInput
 			data-testid="field-expiration"
 			type="number"
 			label={$t('common.minutes', { values: { n: 0 } })}
 			bind:value={note.expiration}
-			disabled={!timeExpiration}
+			disabled={!timeExpiration && !disableModSw}
 			max={$status?.max_expiration}
 			validate={(v) =>
+				// Use <= insteaad of < to avoid error message when value is equals to max.
 				($status && v <= $status?.max_expiration) ||
 				$t('home.errors.max', { values: { n: $status?.max_expiration ?? 0 } })}
 		/>
