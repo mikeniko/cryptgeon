@@ -54,7 +54,7 @@ pub async fn create(Json(mut n): Json<Note>) -> Response {
     }
     if !*config::ALLOW_ADVANCED {
         // Default value for views is 0 which means unlimited. 
-        // This wirks together with the ALLOW_ADVANCED default value wich is true.
+        // This works together with the ALLOW_ADVANCED default value wich is true.
         // If ALLOW_ADVANCED is false, we need to set the default value for views 
         // to value 1 to keep the old behavior.
         n.views = Some(*config::DEFAULT_VIEWS);
