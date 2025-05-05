@@ -53,7 +53,7 @@
 			disabled={!timeExpiration}
 			max={$status?.max_expiration}
 			validate={(v) =>
-				($status && v < $status?.max_expiration) ||
+				($status && v <= $status?.max_expiration) ||
 				$t('home.errors.max', { values: { n: $status?.max_expiration ?? 0 } })}
 		/>
 	</div>
