@@ -22,7 +22,7 @@ services:
     command: redis-server --save "" --appendonly no
     # Set a size limit. See link below on how to customise.
     # https://redis.io/docs/latest/operate/rs/databases/memory-performance/eviction-policy/
-    # --maxmemory 1gb --maxmemory-policy allkeys-lrulpine
+    # --maxmemory 1gb --maxmemory-policy allkeys-lru
     # This prevents the creation of an anonymous volume.
     tmpfs:
       - /data
@@ -66,7 +66,7 @@ services:
     command: redis-server --save "" --appendonly no
     # Set a size limit. See link below on how to customise.
     # https://redis.io/docs/latest/operate/rs/databases/memory-performance/eviction-policy/
-    # --maxmemory 1gb --maxmemory-policy allkeys-lrulpine
+    # --maxmemory 1gb --maxmemory-policy allkeys-lru
     # This prevents the creation of an anonymous volume.
     tmpfs:
       - /data
