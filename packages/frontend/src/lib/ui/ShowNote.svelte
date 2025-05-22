@@ -20,7 +20,7 @@
 
 	import Button from '$lib/ui/Button.svelte'
 	import { copy } from '$lib/utils'
-	import type { FileDTO, NotePublic } from 'cryptgeon/shared'
+	import type { FileDTO, NotePublic } from 'cryptgeonmk/shared'
 
 	interface Props {
 		note: DecryptedNote
