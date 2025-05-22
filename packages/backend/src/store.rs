@@ -39,7 +39,11 @@ pub fn set(id: &String, note: &Note) -> Result<(), &'static str> {
             conn.expire(id, seconds as i64)
                 .map_err(|_| "Unable to set expiration on notion")?
         }
-        None => {}
+        None => {
+            let seconds = 60 * 60; // Hardcoded 1 hour
+            conn.expire(id, seconds as i64)
+                .map_err(|_| "Unable to set expiration on notion")?
+        }
     };
     Ok(())
 }
