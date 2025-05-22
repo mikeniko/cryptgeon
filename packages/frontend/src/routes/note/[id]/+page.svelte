@@ -7,7 +7,7 @@
 	import Loader from '$lib/ui/Loader.svelte'
 	import ShowNote, { type DecryptedNote } from '$lib/ui/ShowNote.svelte'
 	import TextInput from '$lib/ui/TextInput.svelte'
-	import { Adapters, API, type NoteMeta } from 'cryptgeon/shared'
+	import { Adapters, API, type NoteMeta } from 'cryptgeonmk/shared'
 	import type { PageData } from './$types'
 
 	interface Props {
