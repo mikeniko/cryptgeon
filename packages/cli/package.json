@@ -1,10 +1,10 @@
 {
-  "name": "cryptgeon",
+  "name": "cryptgeonmk",
   "version": "2.9.1",
-  "homepage": "https://github.com/cupcakearmy/cryptgeon",
+  "homepage": "https://github.com/mikeniko/cryptgeon",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cupcakearmy/cryptgeon.git",
+    "url": "https://github.com/mikeniko/cryptgeon.git",
     "directory": "packages/cli"
   },
   "type": "module",
