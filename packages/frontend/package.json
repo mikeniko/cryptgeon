@@ -29,7 +29,7 @@
 	},
 	"dependencies": {
 		"@fontsource/fira-mono": "^5.1.1",
-		"cryptgeon": "workspace:*",
+		"cryptgeonmk": "workspace:*",
 		"occulto": "^2.0.6",
 		"pretty-bytes": "^6.1.1",
 		"qrious": "^4.0.2"
