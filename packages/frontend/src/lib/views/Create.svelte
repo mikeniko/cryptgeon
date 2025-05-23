@@ -13,7 +13,7 @@
 	import Result, { type NoteResult } from '$lib/ui/NoteResult.svelte'
 	import Switch from '$lib/ui/Switch.svelte'
 	import TextArea from '$lib/ui/TextArea.svelte'
-	import { Adapters, API, PayloadToLargeError, type FileDTO, type Note } from 'cryptgeon/shared'
+	import { Adapters, API, PayloadToLargeError, type FileDTO, type Note } from 'cryptgeonmk/shared'
 
 	let note: Note = $state({
 		contents: '',
