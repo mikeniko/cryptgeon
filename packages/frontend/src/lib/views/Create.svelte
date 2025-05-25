@@ -40,8 +40,11 @@
 	$effect(() => {
 		description = $t('home.explanation', {
 			values: {
-				type: $t(timeExpiration ? 'common.minutes' : 'common.views', {
-					values: { n: (timeExpiration ? note.expiration : note.views) ?? '?' },
+				type_view: $t('common.views', {
+					values: { n: note.views ?? '?' },
+				}),
+				type_minute: $t('common.minutes', {
+					values: { n: note.expiration ?? '?' },
 				}),
 			},
 		})
@@ -165,6 +168,13 @@
 				{/if}
 			</p>
 
+			{#if $status?.footer_html}
+				<p>
+					<br />
+					{@html $status.footer_html}
+				</p>
+			{/if}
+			
 			{#if advanced}
 				<div transition:blur|global={{ duration: 250 }}>
 					<hr />

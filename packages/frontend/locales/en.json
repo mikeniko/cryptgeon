@@ -21,7 +21,7 @@
 	},
 	"home": {
 		"intro": "Easily send <i>fully encrypted</i>, secure notes or files with one click. Just create a note and share the link.",
-		"explanation": "the note will expire and be destroyed after {type}.",
+		"explanation": "the note will expire and be destroyed after {type_view} or {type_minute}.",
 		"new_note": "new note",
 		"new_note_notice": "<b>availability:</b><br />the note is not guaranteed to be stored as everything is kept in ram, if it fills up the oldest notes will be removed.<br />(you probably will be fine, just be warned.)",
 		"errors": {

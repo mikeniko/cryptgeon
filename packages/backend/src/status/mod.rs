@@ -22,6 +22,7 @@ pub struct Status {
     pub theme_page_title: String,
     pub theme_favicon: String,
     pub theme_new_note_notice: bool,
+    pub footer_html: String,
 }
 
 pub async fn get_status() -> (StatusCode, Json<Status>) {
@@ -41,6 +42,7 @@ pub async fn get_status() -> (StatusCode, Json<Status>) {
         theme_text: config::THEME_TEXT.to_string(),
         theme_page_title: config::THEME_PAGE_TITLE.to_string(),
         theme_favicon: config::THEME_FAVICON.to_string(),
+        footer_html: config::FOOTER_HTML.to_string(),
     };
 
     (StatusCode::OK, Json(status))
