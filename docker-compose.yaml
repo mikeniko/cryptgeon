@@ -11,7 +11,7 @@ services:
       - /data
 
   app:
-    image: cupcakearmy/cryptgeon:latest
+    image: m1nko/cryptgeon:latest
     depends_on:
       - redis
     environment:

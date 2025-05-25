@@ -119,7 +119,7 @@ services:
       - /data
 
   app:
-    image: cupcakearmy/cryptgeon:latest
+    image: m1nko/cryptgeon:latest
     restart: unless-stopped
     depends_on:
       - redis
