@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "dev:docker": "docker-compose -f docker-compose.dev.yaml up redis",
+    "dev:docker": "docker compose -f docker-compose.dev.yaml up redis",
     "dev:packages": "pnpm --parallel run dev",
     "dev": "run-p dev:*",
-    "docker:up": "docker-compose -f docker-compose.dev.yaml up",
-    "docker:build": "docker-compose -f docker-compose.dev.yaml build",
+    "docker:up": "docker compose -f docker-compose.dev.yaml up",
+    "docker:build": "docker compose -f docker-compose.dev.yaml build",
     "test": "playwright test --project=chrome --project=firefox --project=safari",
     "test:local": "playwright test --project=chrome",
     "test:server": "run-s docker:up",
