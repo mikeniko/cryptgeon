@@ -39,7 +39,7 @@
 			the backend is written in rust and the frontend is svelte and typescript.
 			<br />
 			you are welcomed to check & audit the
-			<a href="https://github.com/m1nko/cryptgeon" target="_blank" rel="noopener noreferrer">
+			<a href="https://github.com/mikeniko/cryptgeon" target="_blank" rel="noopener noreferrer">
 				source code</a
 			>.
 		</span>
