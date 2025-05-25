@@ -21,7 +21,7 @@
 	},
 	"home": {
 		"intro": "Envía fácilmente notas o archivos <i>totalmente encriptados</i> y seguros con un solo clic. Solo tienes que crear una nota y compartir el enlace.",
-		"explanation": "la nota expirará y se destruirá después de {type}.",
+		"explanation": "la nota expirará y se destruirá después de {type_view} o {type_minute}.",
 		"new_note": "nueva nota",
 		"new_note_notice": "<b>disponibilidad:</b><br />no se garantiza que la nota se almacene, ya que todo se guarda en la memoria RAM, si se llena se eliminarán las notas más antiguas.<br />(probablemente estará bien, solo está advertido.)",
 		"errors": {

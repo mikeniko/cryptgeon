@@ -21,7 +21,7 @@
 	},
 	"home": {
 		"intro": "Envoyez facilement des notes ou des fichiers <i>entièrement chiffrés</i> et sécurisés en un seul clic. Il suffit de créer une note et de partager le lien.",
-		"explanation": "la note expirera et sera détruite après {type}.",
+		"explanation": "la note expirera et sera détruite après {type_view} ou {type_minute}.",
 		"new_note": "nouvelle note",
 		"new_note_notice": "<b>disponibilité :</b><br />il n'est pas garanti que la note reste stockée car tout est conservé dans la mémoire vive; si elle se remplit, les notes les plus anciennes seront supprimées.<br />(tout ira probablement bien, soyez juste averti.)",
 		"errors": {

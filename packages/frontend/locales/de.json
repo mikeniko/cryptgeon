@@ -21,7 +21,7 @@
 	},
 	"home": {
 		"intro": "Erstellen Sie mit einem Klick <i>vollständig verschlüsselte</i>, sichere Notizen oder Dateien und teilen Sie diese über einen Link.",
-		"explanation": "Die Notiz verfällt nach {type}.",
+		"explanation": "Die Notiz verfällt nach {type_view} oder {type_minute}..",
 		"new_note": "Neue Notiz",
 		"new_note_notice": "<b>Wichtiger Hinweis zur Verfügbarkeit:</b><br />Es kann nicht garantiert werden, dass diese Notiz gespeichert wird, da diese <b>ausschließlich im Speicher</b> gehalten werden. Ist dieser voll, werden die ältesten Notizen entfernt.<br />(Wahrscheinlich gibt es keine derartigen Probleme, seien Sie nur vorgewarnt).",
 		"errors": {
