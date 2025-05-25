@@ -2,22 +2,12 @@
   <img src="./design/Github.png" alt="logo">
 </p>
 
-<a href="https://discord.gg/nuby6RnxZt">
-  <img alt="discord" src="https://img.shields.io/discord/252403122348097536?style=for-the-badge" />
-  <img alt="docker pulls" src="https://img.shields.io/docker/pulls/cupcakearmy/cryptgeon?style=for-the-badge" />
-  <img alt="Docker image size badge" src="https://img.shields.io/docker/image-size/cupcakearmy/cryptgeon?style=for-the-badge" />
-  <img alt="Latest version" src="https://img.shields.io/github/v/release/cupcakearmy/cryptgeon?style=for-the-badge" />
-</a>
 
-<br/><br/>
-<a href="https://www.producthunt.com/posts/cryptgeon?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cryptgeon" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295189&theme=light" alt="Cryptgeon - Securely share self-destructing notes | Product Hunt" height="50" /></a>
-<a href=""><img src="./.github/lokalise.png" height="50">
-<a title="Install cryptgeon Raycast Extension" href="https://www.raycast.com/cupcakearmy/cryptgeon"><img src="https://www.raycast.com/cupcakearmy/cryptgeon/install_button@2x.png?v=1.1" height="64" alt="" style="height: 64px;"></a>
-<br/><br/>
-
-EN | [简体中文](README_zh-CN.md) | [ES](README_ES.md)
+EN
 
 ## About?
+
+This fork is a feature extension for the original cryptgeon project. 
 
 _cryptgeon_ is a secure, open source sharing note or file service inspired by [_PrivNote_](https://privnote.com).
 It includes a server, a web page and a CLI client.
@@ -39,12 +29,6 @@ npx cryptgeon send text "This is a secret note"
 ```
 
 For more documentation about the CLI see the [readme](./packages/cli/README.md).
-
-### Raycast Extension
-
-There is an [official Raycast extension](https://www.raycast.com/cupcakearmy/cryptgeon).
-
-<a title="Install cryptgeon Raycast Extension" href="https://www.raycast.com/cupcakearmy/cryptgeon"><img src="https://www.raycast.com/cupcakearmy/cryptgeon/install_button@2x.png?v=1.1" height="64" alt="" style="height: 64px;"></a>
 
 ## Features
 
@@ -101,7 +85,7 @@ of the notes even if it tried to.
 
 ### Docker
 
-Docker is the easiest way. There is the [official image here](https://hub.docker.com/r/cupcakearmy/cryptgeon).
+Docker is the easiest way. There is the [official image here](https://hub.docker.com/r/m1nko/cryptgeon).
 
 ```yaml
 # docker-compose.yml
@@ -113,15 +97,21 @@ services:
     image: redis:7-alpine
     # This is required to stay in RAM only.
     command: redis-server --save "" --appendonly no
+    # 
     # Set a size limit. See link below on how to customise.
     # https://redis.io/docs/latest/operate/rs/databases/memory-performance/eviction-policy/
-    # --maxmemory 1gb --maxmemory-policy allkeys-lrulpine
+    # --maxmemory 1gb --maxmemory-policy allkeys-lru
+    #
+    # If percistense is required, following command could be used. It provides percistence and size limit at the same time with
+    # allkeys-lru policy
+    # command: ["redis-server", "--appendonly", "no", "--maxmemory", "1gb", "--maxmemory-policy", "allkeys-lru"]
+    #
     # This prevents the creation of an anonymous volume.
     tmpfs:
       - /data
 
   app:
-    image: cupcakearmy/cryptgeon:latest
+    image: m1nko/cryptgeon:latest
     depends_on:
       - redis
     environment:
@@ -141,15 +131,15 @@ services:
 
 ### NGINX Proxy
 
-See the [examples/nginx](https://github.com/cupcakearmy/cryptgeon/tree/main/examples/nginx) folder. There an example with a simple proxy, and one with https. You need to specify the server names and certificates.
+See the [examples/nginx](https://github.com/mikeniko/cryptgeon/tree/main/examples/nginx) folder. There an example with a simple proxy, and one with https. You need to specify the server names and certificates.
 
 ### Traefik 2
 
-See the [examples/traefik](https://github.com/cupcakearmy/cryptgeon/tree/main/examples/traefik) folder.
+See the [examples/traefik](https://github.com/mikeniko/cryptgeon/tree/main/examples/traefik) folder.
 
 ### Scratch
 
-See the [examples/scratch](https://github.com/cupcakearmy/cryptgeon/tree/main/examples/scratch) folder. There you'll find a guide how to setup a server and install cryptgeon from scratch.
+See the [examples/scratch](https://github.com/mikeniko/cryptgeon/tree/main/examples/scratch) folder. There you'll find a guide how to setup a server and install cryptgeon from scratch.
 
 ### Synology
 
