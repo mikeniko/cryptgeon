@@ -27,10 +27,13 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm run build
 
-      - run: npm publish
+      # Staged: version must be approved with 2FA on npmjs.com before it goes live
+      - run: npm stage publish
         working-directory: ./packages/cli
 
   docker:
+    # Image tags come from the semver git tag; manual runs only re-stage the CLI
+    if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
