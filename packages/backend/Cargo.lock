@@ -252,7 +252,7 @@ dependencies = [
 
 [[package]]
 name = "cryptgeon"
-version = "2.9.8"
+version = "2.9.9"
 dependencies = [
  "axum",
  "bs62",
